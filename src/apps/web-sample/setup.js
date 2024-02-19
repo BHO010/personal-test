@@ -20,7 +20,10 @@ export default {
   PUBLIC_ROUTES: [
     { path: '/', name: 'Home', component: () => import('./views/SignIn.vue') },
     { path: '/signin', name: 'SignIn', component: () => import('./views/SignIn.vue') },
-    { path: '/callback', name: 'Callback', component: () => import('./views/Callback.vue') }
+    { path: '/callback', name: 'Callback', component: () => import('./views/Callback.vue') },
+    { path: '/sample', name: 'Callback', component: () => import('./views/Sample.vue') },
+    { path: '/public/demo/table', name: 'Public Table', component: async () => import('./views/Demo/DemoTable.vue') },
+    { path: '/public/demo/table-crud', name: 'Public Table CRUD', component: async () => import('./views/Demo/DemoTableCrud.vue') },
   ],
   SECURE_ROUTES: [
     { path: '/dashboard', name: 'Dashboard', component: async () => import('./views/Dashboard.vue') },

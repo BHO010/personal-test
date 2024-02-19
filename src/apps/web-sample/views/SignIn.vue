@@ -23,6 +23,18 @@
       <p v-if="errorMessage">{{ errorMessage }}</p>
       <p>version {{ VERSION }} {{ isMobile ? 'Mobile' : 'Not Mobile' }}</p>
     </form>
+    <a-select
+      ref="select"
+      v-model:value="value1"
+      style="width: 120px"
+      @focus="focus"
+      @change="handleChange"
+    >
+      <a-select-option value="jack">Jack</a-select-option>
+      <a-select-option value="lucy">Lucy</a-select-option>
+      <a-select-option value="disabled" disabled>Disabled</a-select-option>
+      <a-select-option value="Yiminghe">yiminghe</a-select-option>
+    </a-select>
   </div>
 </template>
 
@@ -52,9 +64,18 @@ export default {
     const errorMessage = ref('')
     const mode = ref('login') // login, otp
     const otp = ref('')
+    const value1 = ref('lucy');
 
     let otpCount = 0
     let otpId = ''
+
+    const focus = () => {
+      console.log('focus');
+    };
+
+    const handleChange = (value) => {
+      console.log(`selected ${value}`);
+    };
 
     const isMobile = useMediaQuery('(max-width: 425px)')
 
