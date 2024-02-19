@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "^9.21.1",
     "msw": "^2.1.6",
     "prettier": "^3.2.5",
-    "vite": "^5.1.0"
+    "vite": "^5.0.12"
   },
   "msw": {
     "workerDirectory": "public"
